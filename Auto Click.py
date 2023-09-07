@@ -74,4 +74,12 @@ pyautogui.click(959, 674, button="left")
 
 time.sleep(2)
 
+#END STATEMENTS
+#Confirmation box
+msg = "Everything is good to go, Have a great Sunday!"
+title = "Go Live!"
+
+#output
+ctypes.windll.user32.MessageBoxW(0, msg, title, 0)
+
 sys.exit()
