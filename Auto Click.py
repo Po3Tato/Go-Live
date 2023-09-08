@@ -7,39 +7,29 @@ import ctypes.wintypes
 import pyautogui
 
 
-# specify folder where all .exe are found
-folder_path1 = " "#app folder location goes here
+# This function is designed to open an application given its root-folder and application name.
+# If the file does not exist, a 'FileNotFoundError' is raised and a user-friendly message is shown.
+# Any errors will be caught and its error message shown.
+def open_app(folder_path, app_name):
+    app_path = os.path.join(folder_path, app_name)
+    try:
+        subprocess.Popen(app_path)
+    except FileNotFoundError:
+        print(f"The application '{app_path}' was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
+# specify folder where all .exe are found
+folder_path1 = " "#folder path
 # First App
 app_name1 = " "#app name goes here. It is the .exe file you want to run
-
-# combine folder and app_name1 for first app
-app_path = os.path.join(folder_path1, app_name1)
-
-try:
-    # Open the application.
-    subprocess.Popen(app_path)
-except FileNotFoundError:
-    print(f"The application '{app_path}' was not found.")
-except Exception as e:
-    print(f"An error occurred: {e}")
+open_app(folder_path1, app_name1)
 
 # Second App
-folder_path2 = " "#app folder location goes here
-
+folder_path2 = " " #folder path
 # specify the second app to be opened
 app_name2 = " "#app name goes here. It is the .exe file you want to run
-
-# combine folder and app_name2 for first app
-app_path2 = os.path.join(folder_path2, app_name2)
-
-try:
-    # Open the application.
-    subprocess.Popen(app_path2)
-except FileNotFoundError:
-    print(f"The application '{app_path2}' was not found.")
-except Exception as e:
-    print(f"An error occurred: {e}")
+open_app(folder_path2, app_name2)
 
 time.sleep(4)
 
