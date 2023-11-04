@@ -9,6 +9,7 @@ def find_app(app_name):
         os.path.expanduser("~\\AppData\\Local\\Programs"),
         os.path.expanduser("~\\AppData\\Roaming")
     ]
+    # search application in given directories
     for directory in search_directories:
         for root, dirs, files in os.walk(directory):
             for file in files:
@@ -16,6 +17,7 @@ def find_app(app_name):
                     return os.path.join(root, file)
     return None
 
+# open applications when found
 def open_app(app_name):
     app_path = find_app(app_name)
     if app_path is None:
