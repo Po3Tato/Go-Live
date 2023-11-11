@@ -2,3 +2,4 @@
 *.pyc
 *.png
 get_app_size.py
+*.env
