@@ -32,10 +32,10 @@ To start the live stream setup, run the script with:
 
 Make sure to set Zoom to automatically join audio by following these steps:
 
-    Open your Zoom client and sign in to your account.
-    Click on your profile picture or the gear icon to go to "Settings."
-    Navigate to the "Audio" tab.
-    Check the option "Automatically join audio by computer when joining a meeting."
+- Open your Zoom client and sign in to your account.
+- Click on your profile picture or the gear icon to go to "Settings."
+- Navigate to the "Audio" tab.
+- Check the option "Automatically join audio by computer when joining a meeting."
 
 Customization
 
